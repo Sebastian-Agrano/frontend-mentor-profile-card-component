@@ -7,6 +7,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Link](#link)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
@@ -27,6 +28,10 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 #### Mobile 375px
 ![](./screenshots/mobile-screenshot.jpg)
+
+### Link
+
+- Live Site URL: [GitHub Pages](https://sebastian-agrano.github.io/frontend-mentor-profile-card-component/)
 
 ## My process
 
