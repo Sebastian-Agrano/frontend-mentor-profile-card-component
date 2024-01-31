@@ -1,108 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 :root {
-    /*PRIMARIOS*/
-    --Dark-cyan: hsl(185, 75%, 39%);
-    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
-    --Dark-grayish-blue: hsl(227, 10%, 46%);
-    /*SECUNDARIOS*/
-    --Dark-gray: hsl(0, 0%, 59%);
+  /*PRIMARIOS*/
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  /*SECUNDARIOS*/
+  --Dark-gray: hsl(0, 0%, 59%);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--Dark-cyan);
-    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: right 50vw bottom 40vh, left 50vw top 50vh;
-    font-family: "Kumbh Sans";
-    font-size: 18px;
-    text-align: center;
-    color: var(--Very-dark-desaturated-blue);
-    font-weight: 700;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--Dark-cyan);
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 40vh, left 50vw top 50vh;
+  font-family: "Kumbh Sans";
+  font-size: 18px;
+  text-align: center;
+  color: var(--Very-dark-desaturated-blue);
+  font-weight: 700;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 95%;
+  display: flex;
+  justify-content: center;
 }
 
 div.tarjeta {
-    background-color: white;
-    width: 350px;
-    border-radius: 20px;
-    position: relative;
+  background-color: white;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  position: relative;
 }
 
 div.tarjeta img:first-child {
-    border-radius: 20px 20px 0 0 ;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
 }
 
 img.avatar {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 24%;
-    margin: auto;
-    border: 5px solid white;
-    border-radius: 50px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24%;
+  margin: auto;
+  border: 5px solid white;
+  border-radius: 50px;
 }
 
 div.tarjeta p.nombre {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 
 div.tarjeta p.nombre span {
-    margin-left: 5px;
-    color: var(--Dark-grayish-blue);
-    font-weight: 400;
+  margin-left: 5px;
+  color: var(--Dark-grayish-blue);
+  font-weight: 400;
 }
 
 div.tarjeta p.nombre + p {
-    font-size: 0.8em;
-    color: var(--Dark-gray);
-    font-weight: 400;
-    margin: 10px 0 20px;
+  font-size: 0.8em;
+  color: var(--Dark-gray);
+  font-weight: 400;
+  margin: 10px 0 20px;
 }
 
 ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid gainsboro;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid gainsboro;
 }
 
 ul li {
-    padding: 25px;
+  padding: 25px;
 }
 
 .letra__liviana {
-    font-weight: 400;
-    color: var(--Dark-gray);
+  font-weight: 400;
+  color: var(--Dark-gray);
 }
 
 p.texto {
-    letter-spacing: 0.14em;
-    font-size: 0.6em;
-    color: var(--Dark-gray);
+  letter-spacing: 0.14em;
+  font-size: 0.6em;
+  color: var(--Dark-gray);
 }
 
-main>img {
-    position: absolute;
+main > img {
+  position: absolute;
 }
 
 .bg__top {
-    bottom: 40vh;
-    right: 51vw;
+  bottom: 40vh;
+  right: 51vw;
 }
 
 .bg__bottom {
-    bottom: -40vh;
-    left: 48vw;
+  bottom: -40vh;
+  left: 48vw;
 }
 
+@media (max-width: 350px) {
+  ul li {
+    padding: 17px;
+  }
+
+  div.tarjeta p.nombre {
+    margin-top: 80px;
+  }
+}
