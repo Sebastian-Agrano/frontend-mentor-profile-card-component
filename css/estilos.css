@@ -16,47 +16,47 @@
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Kumbh Sans";
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
   background-color: var(--Dark-cyan);
   background-image: url(../images/bg-pattern-top.svg),
     url(../images/bg-pattern-bottom.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: right 50vw bottom 40vh, left 50vw top 50vh;
-  font-family: "Kumbh Sans";
-  font-size: 18px;
-  text-align: center;
   color: var(--Very-dark-desaturated-blue);
-  font-weight: 700;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 main {
-  width: 95%;
   display: flex;
   justify-content: center;
+  width: 95%;
 }
 
 div.tarjeta {
-  background-color: white;
+  position: relative;
   width: 100%;
   max-width: 350px;
   border-radius: 20px;
-  position: relative;
+  background-color: white;
 }
 
 div.tarjeta img:first-child {
-  border-radius: 20px 20px 0 0;
   width: 100%;
+  border-radius: 20px 20px 0 0;
 }
 
 img.avatar {
-  display: block;
   position: absolute;
   left: 0;
   right: 0;
   top: 24%;
+  display: block;
   margin: auto;
   border: 5px solid white;
   border-radius: 50px;
@@ -68,22 +68,22 @@ div.tarjeta p.nombre {
 
 div.tarjeta p.nombre span {
   margin-left: 5px;
-  color: var(--Dark-grayish-blue);
   font-weight: 400;
+  color: var(--Dark-grayish-blue);
 }
 
 div.tarjeta p.nombre + p {
-  font-size: 0.8em;
-  color: var(--Dark-gray);
-  font-weight: 400;
   margin: 10px 0 20px;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--Dark-gray);
 }
 
 ul {
-  list-style-type: none;
   display: flex;
   justify-content: center;
   border-top: 1px solid gainsboro;
+  list-style-type: none;
 }
 
 ul li {
@@ -96,8 +96,8 @@ ul li {
 }
 
 p.texto {
-  letter-spacing: 0.14em;
   font-size: 0.6em;
+  letter-spacing: 0.14em;
   color: var(--Dark-gray);
 }
 
