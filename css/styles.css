@@ -2,11 +2,13 @@
 
 :root {
   /*PRIMARIOS*/
-  --Dark-cyan: hsl(185, 75%, 39%);
-  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
-  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
   /*SECUNDARIOS*/
-  --Dark-gray: hsl(0, 0%, 59%);
+  --dark-gray: hsl(0, 0%, 59%);
+  /*FUENTES*/
+  --primary-font: "Kumbh Sans", sans-serif;
 }
 
 * {
@@ -15,43 +17,47 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+  font-family: var(--primary-font);
+}
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: "Kumbh Sans";
-  font-size: 18px;
+  font-size: 1.8rem;
   text-align: center;
   font-weight: 700;
-  background-color: var(--Dark-cyan);
+  background-color: var(--dark-cyan);
   background-image: url(../images/bg-pattern-top.svg),
     url(../images/bg-pattern-bottom.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: right 50vw bottom 40vh, left 50vw top 50vh;
-  color: var(--Very-dark-desaturated-blue);
+  color: var(--very-dark-desaturated-blue);
 }
 
-main {
+.main-container {
   display: flex;
   justify-content: center;
   width: 95%;
 }
 
-div.tarjeta {
+.card {
   position: relative;
   width: 100%;
-  max-width: 350px;
-  border-radius: 20px;
+  max-width: 35rem;
+  border-radius: 2rem;
   background-color: white;
+  overflow: hidden;
 }
 
-div.tarjeta img:first-child {
+.card-pattern {
   width: 100%;
-  border-radius: 20px 20px 0 0;
 }
 
-img.avatar {
+.card-avatar {
   position: absolute;
   left: 0;
   right: 0;
@@ -59,45 +65,42 @@ img.avatar {
   display: block;
   margin: auto;
   border: 5px solid white;
-  border-radius: 50px;
+  border-radius: 5rem;
 }
 
-div.tarjeta p.nombre {
-  margin-top: 70px;
+.card-name {
+  margin-top: 7rem;
+  font-size: 1.8rem;
 }
 
-div.tarjeta p.nombre span {
-  margin-left: 5px;
+.card-name span {
+  margin-left: 0.5rem;
   font-weight: 400;
   color: var(--Dark-grayish-blue);
 }
 
-div.tarjeta p.nombre + p {
-  margin: 10px 0 20px;
-  font-size: 0.8em;
+.card-location {
+  margin: 1rem 0 2rem;
+  font-size: 1.4rem;
   font-weight: 400;
   color: var(--Dark-gray);
 }
 
-ul {
+.card-stats {
   display: flex;
   justify-content: center;
   border-top: 1px solid gainsboro;
   list-style-type: none;
 }
 
-ul li {
-  padding: 25px;
+.card-stats li {
+  padding: 2.5rem;
 }
 
-.letra__liviana {
+.card-stats p:last-child {
+  font-size: 1.1rem;
   font-weight: 400;
-  color: var(--Dark-gray);
-}
-
-p.texto {
-  font-size: 0.6em;
-  letter-spacing: 0.14em;
+  letter-spacing: 1.5px;
   color: var(--Dark-gray);
 }
 
@@ -115,12 +118,16 @@ main > img {
   left: 48vw;
 }
 
-@media (max-width: 350px) {
-  ul li {
-    padding: 17px;
+@media (width < 350px) {
+  .card-avatar {
+    width: 9.5rem;
   }
 
-  div.tarjeta p.nombre {
-    margin-top: 80px;
+  .card-stats li {
+    padding: 1.7rem;
+  }
+
+  .card-name {
+    margin-top: 8rem;
   }
 }
